@@ -7,7 +7,7 @@ export default function Suzumewatch() {
   const video = searchParams.get('video')
 
   return (
-    <div className="min-h-screen bg-cover text-white pt-25 px-4 sm:px-8 flex items-start justify-center"
+    <div className="min-h-screen bg-cover text-white pb-25 pt-25 px-4 sm:px-8 flex items-start justify-center"
     style={{
       backgroundImage : "url('https://images3.alphacoders.com/137/1376355.jpg')"
     }}>
