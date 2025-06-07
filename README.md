@@ -1,3 +1,3 @@
-#Watch Anime for free with Anime TV
+Watch Anime for free with Anime TV
 
 made with 💖 by leanwithkumar
