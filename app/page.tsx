@@ -1,103 +1,192 @@
-import Image from "next/image";
+"use client";
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
+import Link  from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+    <div className="relative md:h-[200vh]">
+     
+      <div className="fixed top-0 left-0 w-full h-screen -z-10 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          playsInline
+          loop
+          preload="auto"
+          className="w-full h-full object-cover"
+        >
+          <source src="/videos/videoplayback1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute top-0 left-0 w-full h-full" />
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    
+      <div className="pt-[100vh]">
+        <div className="text-5xl text-white px-6 py-4 text-center">Most Trending Anime</div>
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6 px-6 py-5">
+          
+          <div className="h-[40rem]  relative flex items-center justify-center">
+            <Link href="/dragonball">
+              <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/d0/28/b2/d028b289da395a248e46d71c65ca1dcb.jpg">
+              <p className="font-bold text-xl">Dragon Ball</p>
+              
+              <p className="font-normal text-sm cursor-pointer underline hover:text-blue-400 transition">
+              Stream Now
+              </p>
+              
+           </DirectionAwareHover>
+           </Link>
+          </div>
+
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/naruto"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/a8/4e/79/a84e79ad5d11991ee4a827ebd3284d70.jpg">
+              <p className="font-bold text-xl">Naruto</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/onepiece"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/35/42/4a/35424a76d4df6d1f1381e75339ea30c1.jpg">
+              <p className="font-bold text-xl">One Piece</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/attackontitan"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/67/b6/90/67b690140f09b858dd942c7a35e434e2.jpg">
+              <p className="font-bold text-xl">Attack on Titan</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/bleach"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/3e/e0/29/3ee0299589bf61871e2f838a48f4b965.jpg">
+              <p className="font-bold text-xl">Bleach</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/hunterxhunter"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/f2/e4/b8/f2e4b8b7eb8ca18a025c735dd81f9c79.jpg">
+              <p className="font-bold text-xl">Hunter x Hunter</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/blackclover"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/e9/3c/d2/e93cd2c6b82ecc80f33c46a5fe7fa98f.jpg">
+              <p className="font-bold text-xl">Black Clover</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/demonslayer"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/a3/05/3c/a3053ce61d5c047e59d8986b98856a73.jpg">
+              <p className="font-bold text-xl">Demon Slayer</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/onepunchman"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/3c/23/4e/3c234e4e369df039769ab414c1500bdf.jpg">
+              <p className="font-bold text-xl">One Punch Man</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/jujutsukisen"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/56/e3/bd/56e3bd29c2ca846af718fbd512512ead.jpg">
+              <p className="font-bold text-xl">Jujutsu Kisen</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/deathnote"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/40/27/95/402795450cf62e52e64b5a9c548556f2.jpg">
+              <p className="font-bold text-xl">Deathnote</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/fullmetalalchemist"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/5b/91/05/5b9105b29936fbcb8e3fd53271ded85d.jpg">
+              <p className="font-bold text-xl">Fullmetal Alchemist</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/weatheringwithyou"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/de/4e/01/de4e0140ecdce63e20abb54720d397e4.jpg">
+              <p className="font-bold text-xl">Weathering With You</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/suzume"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/a3/b4/09/a3b409ca3077e00188cff779cf425dcb.jpg">
+              <p className="font-bold text-xl">Suzume</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/asilentvoice"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/83/5c/d4/835cd4892e3741678f0fb99c0bdee8f5.jpg">
+              <p className="font-bold text-xl">A Silent Voice</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+          
+          <div className="h-[40rem] relative flex items-center justify-center">
+            <Link href={"/yourname"}>
+            <DirectionAwareHover imageUrl="https://i.pinimg.com/736x/09/0c/3f/090c3fb9097f799e629351a6d26f5888.jpg">
+              <p className="font-bold text-xl">Your Name</p>
+              <p className="font-normal text-sm">Stream Now</p>
+            </DirectionAwareHover>
+            </Link>
+          </div>
+          
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+  <footer className="w-full px-4 py-6 text-white">
+  <div className="flex flex-col sm:flex-row justify-between items-center font-semibold text-m sm:text-base md:px-35">
+    <div className="mb-2 sm:mb-0">
+      © 2025 | made with 💖 by leanwithkumar
     </div>
+    <div className="flex space-x-4">
+      <a href="https://github.com/leanwithkumar" className="hover:underline">github</a>
+      <a href="https://x.com/leanwithkumar" className="hover:underline">twitter</a>
+      <a href="https://www.instagram.com/leanwithkumar/" className="hover:underline">insta</a>
+    </div>
+  </div>
+</footer>
+</div>
+       
+    </>
+    
   );
 }
